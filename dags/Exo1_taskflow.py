@@ -14,12 +14,3 @@ with DAG(
         task_id="tache1",
         bash_commande= "echo'Bonjour depuis Airflow'",
    )
-    tache2 = BashOperator(
-         task_id="tache2",
-        bash_commande= """
-            echo"Valeur Tache1 depuis XCOM : {{ti.xcom_pull(task_ids= 'tache1')}}
-            
-            """,
-       )
-    tache1 >> tache2
-    
