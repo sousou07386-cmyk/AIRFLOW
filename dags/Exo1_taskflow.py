@@ -17,7 +17,7 @@ with DAG(
     tache2 = BashOperator(
          task_id="tache2",
         bash_commande= """
-            echo"Valeur Tache1 depuis XCOM : {{ti.xcom_pull(task_ids= 'tache1')}}
+            echo"Valeur Tache1 depuis XCOM : {{ti.xcom_pull(task_ids= 'tache1')}}"
             
             """,
        )
